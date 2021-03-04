@@ -1,17 +1,37 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+class App extends React.Component {
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+    constructor(props)
+    {
+        super(props);
+        this.state = {
+            input: 0,
+            result: 'Ainda não calculado'
+        }
+    }
+
+    convert = () => {
+        let bin = this.state.input;
+        let dec = 0;
+        for (let c = 0; c < bin.length; c++) dec += Math.pow(2, c) * bin[bin.length - c - 1]; 
+        this.setState({result: dec});
+    }
+
+    render() {
+        return (
+            <div className="App">
+                <div className="container">
+                    <p className="title">Conversor de Binário para Decimal</p>
+                    <input value={this.state.input} onChange={a => this.setState({input: a.target.value})}type="number"/>
+                    <button onClick={this.convert}>Converter</button>
+                    <p>Resultado: {this.state.result}</p>
+                </div>
+            </div>
+        )
+    }
+}
+
+ReactDOM.render(<App/>, document.getElementById('root'));
