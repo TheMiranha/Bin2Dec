@@ -1,3 +1,6 @@
+# Função
+Criada com a intenção de converter números binários para decimais
+
 # Aplicação iniciada com Create React App
 
 Esta aplicação foi desenvolvida usando [ReactJS](https://github.com/facebook/create-react-app).
