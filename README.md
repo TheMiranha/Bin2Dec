@@ -14,6 +14,6 @@ Para saber mais sobre `npm` clique [aqui](https://www.npmjs.com/)
 Este comando irá fazer a aplicação ser iniciada, será aberto um site no seu *ip local*, na porta *3000*
 `http://localhost:3000`
 
-### Ideia
+## Ideia
 
 A ideia dessa aplicação foi tirada deste repositório com algumas ideias de aplicações: [https://github.com/florinpop17/app-ideas](https://github.com/florinpop17/app-ideas)
